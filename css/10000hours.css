@@ -1,29 +1,129 @@
 @font-face {
-    font-family: 'OTEnjoystoriesBA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
+/* 버튼 공통 스타일 */
+button {
+  background-color: #fcee21;
+  color: #5b2386;
+  border: none;
+  border-radius: 56px;
+  height: 66px;
+  padding: 20px 49px;
+  font-family: "GmarketSansBold";
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #5b2386;
+  color: #fff;
+}
+
+main {
+  width: 765px;
+  margin: 50px auto 0 auto;
+  text-align: center;
+  font-family: "GmarketSansMedium";
+}
+
+/* 제목 */
+.tit-timelaw {
+  position: relative;
+  margin-bottom: 66px;
+}
+.tit-timelaw .img-clock {
+  width: 265px;
+}
+.tit-timelaw .img-timelaw {
+  width: 564px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -59px;
+  margin-left: -282px;
+}
+
+.img-txt {
+  margin-bottom: 78px;
+}
+
+/* 상세 설명 */
+.cont-desc {
+  position: relative;
+  margin-bottom: 102px;
+}
+.cont-desc .img-quotes {
+  width: 497px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -248px;
+}
+.cont-desc .txt-desc {
+  line-height: 24px;
+  font-size: 18px;
+}
+.cont-desc .txt-desc .tit-desc {
+  font-size: 24px;
+  font-family: "GmarketSansBold";
+}
+
+/* 입력 폼 */
+.cont-inp {
+  font-size: 24px;
+  margin-bottom: 147px;
+}
+.cont-inp p {
+  margin-bottom: 27px;
+}
+.cont-inp p.txt-time {
+  margin-bottom: 90px;
+}
+.cont-inp input {
+  width: 228px;
+  height: 57px;
+  border-radius: 7px;
+  font-size: inherit;
+  text-align: center;
+}
+.cont-inp .btn-wrap {
+  position: relative;
+}
+.cont-inp .btn-wrap img {
+  position: absolute;
+  right: 35px;
+  bottom: -25px;
 }
