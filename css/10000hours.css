@@ -127,3 +127,30 @@ main {
   right: 35px;
   bottom: -25px;
 }
+
+/* 결과 확인 */
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.cont-result {
+  font-size: 24px;
+}
+.cont-result .txt-wannabe {
+  margin-bottom: 17px;
+}
+.cont-result .txt-time {
+  margin-bottom: 150px;
+}
+.cont-result p > strong {
+  font-size: 70px;
+}
+.cont-result .btn-share {
+  background-color: #fff;
+  margin-left: 18px;
+}
