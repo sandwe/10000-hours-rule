@@ -140,6 +140,7 @@ main {
 
 .cont-result {
   font-size: 24px;
+  margin-bottom: 130px;
 }
 .cont-result .txt-wannabe {
   margin-bottom: 17px;
@@ -153,4 +154,17 @@ main {
 .cont-result .btn-share {
   background-color: #fff;
   margin-left: 18px;
+}
+
+/* 푸터 */
+.cont-footer {
+  text-align: center;
+}
+.cont-footer img {
+  margin-bottom: 20px;
+}
+.cont-footer p {
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  line-height: 17px;
 }
