@@ -35,16 +35,22 @@
 }
 
 /* 버튼 공통 스타일 */
-button {
+button,
+.btn-open,
+.btn-close {
   background-color: #fcee21;
   color: #5b2386;
   border: none;
   border-radius: 56px;
-  height: 66px;
-  padding: 20px 49px;
+  line-height: 66px;
+  padding: 0 49px;
   font-family: "GmarketSansBold";
   font-size: 24px;
   cursor: pointer;
+}
+.btn-open {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 body {
@@ -159,6 +165,7 @@ main {
 /* 푸터 */
 .cont-footer {
   text-align: center;
+  margin-bottom: 70px;
 }
 .cont-footer img {
   margin-bottom: 20px;
@@ -167,4 +174,47 @@ main {
   font-family: "Noto Sans KR";
   font-size: 12px;
   line-height: 17px;
+}
+
+/* 모달 */
+.cont-modal {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.cont-modal .cont-cheer {
+  background-color: #fff;
+  flex-basis: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  border-radius: 30px;
+}
+.img-fighting {
+  width: 396px;
+  margin-bottom: 20px;
+}
+.img-cheer {
+  width: 233px;
+  margin-bottom: 30px;
+}
+.img-licat {
+  width: 433px;
+  margin-bottom: 74px;
 }
