@@ -38,48 +38,68 @@
 button,
 .btn-open,
 .btn-close {
+  display: flex;
+  align-items: center;
   background-color: #fcee21;
+  font-family: "GmarketSansBold";
+  font-size: 24px;
   color: #5b2386;
   border: none;
   border-radius: 56px;
-  line-height: 66px;
+  /* line-height: 66px; */
   padding: 0 49px;
-  font-family: "GmarketSansBold";
-  font-size: 24px;
   cursor: pointer;
 }
-.btn-open {
+.btn-open,
+.btn-close {
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
+button {
+  padding: 20px 49px;
+  text-align: center;
+}
 body {
   background-color: #5b2386;
   color: #fff;
 }
 
-main {
+main,
+footer {
   width: 765px;
-  margin: 50px auto 0 auto;
+  max-width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-family: "GmarketSansMedium";
+}
+main {
+  /* width: 765px;
+  max-width: calc(100% - 40px); */
+  margin: 50px auto 0 auto;
 }
 
 /* 제목 */
 .tit-timelaw {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 265px;
   margin-bottom: 66px;
+  background-image: url("../img/clock.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .tit-timelaw .img-clock {
   width: 265px;
 }
 .tit-timelaw .img-timelaw {
   width: 564px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -59px;
-  margin-left: -282px;
+  height: 112px;
 }
 
 .img-txt {
@@ -88,18 +108,18 @@ main {
 
 /* 상세 설명 */
 .cont-desc {
+  display: flex;
+  justify-content: center;
   position: relative;
-  margin-bottom: 102px;
+  margin-bottom: 62px;
 }
 .cont-desc .img-quotes {
-  width: 497px;
+  object-fit: cover;
   position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -248px;
+  top: 30%;
 }
 .cont-desc .txt-desc {
-  line-height: 24px;
+  line-height: 1.8;
   font-size: 18px;
 }
 .cont-desc .txt-desc .tit-desc {
@@ -109,29 +129,49 @@ main {
 
 /* 입력 폼 */
 .cont-inp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 24px;
   margin-bottom: 147px;
 }
-.cont-inp p {
-  margin-bottom: 27px;
+
+.cont-inp .txt-time {
+  display: flex;
+  flex-wrap: wrap;
 }
-.cont-inp p.txt-time {
-  margin-bottom: 90px;
+.cont-inp .txt-time p {
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 27px;
 }
 .cont-inp input {
   width: 228px;
   height: 57px;
+  margin: 0 5px;
   border-radius: 7px;
   font-size: inherit;
   text-align: center;
+  border: none;
+  box-sizing: border-box;
+}
+.cont-inp input::placeholder {
+  color: #babcbe;
 }
 .cont-inp .btn-wrap {
   position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
 }
 .cont-inp .btn-wrap img {
   position: absolute;
-  right: 35px;
-  bottom: -25px;
+  right: -70px;
+  bottom: -20px;
 }
 
 /* 결과 확인 */
@@ -156,6 +196,11 @@ main {
 }
 .cont-result p > strong {
   font-size: 70px;
+  font-weight: 700;
+}
+.cont-result .btns-wrap {
+  display: flex;
+  justify-content: center;
 }
 .cont-result .btn-share {
   background-color: #fff;
@@ -164,8 +209,7 @@ main {
 
 /* 푸터 */
 .cont-footer {
-  text-align: center;
-  margin-bottom: 70px;
+  margin: 0 auto 70px auto;
 }
 .cont-footer img {
   margin-bottom: 20px;
@@ -217,4 +261,161 @@ main {
 .img-licat {
   width: 433px;
   margin-bottom: 74px;
+}
+
+@media screen and (max-width: 390px) {
+  button,
+  .btn-open,
+  .btn-close {
+    font-size: 14px;
+    border-radius: 56px;
+    line-height: 2;
+    padding: 0 20px;
+  }
+  .btn-open,
+  .btn-close {
+    padding: 15px 20px;
+    line-height: 1;
+  }
+  /* 제목 */
+  .tit-timelaw {
+    height: 126px;
+    margin-bottom: 31px;
+  }
+  .tit-timelaw .img-clock {
+    width: 125px;
+  }
+  .tit-timelaw .img-timelaw {
+    width: 267px;
+    height: 53px;
+  }
+
+  .img-txt {
+    width: 297px;
+    margin-bottom: 62px;
+  }
+
+  /* 상세 설명 */
+  .cont-desc {
+    margin-bottom: 62px;
+  }
+  .cont-desc .img-quotes {
+    top: 20%;
+    left: 0;
+    width: 100%;
+  }
+  .cont-desc .txt-desc {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  .cont-desc .txt-desc .tit-desc {
+    font-size: 14px;
+    font-family: 700;
+  }
+
+  /* 입력 폼 */
+  .cont-inp {
+    font-size: 14px;
+    margin-bottom: 64px;
+  }
+  .cont-inp .txt-time p {
+    margin-top: 18px;
+  }
+  .cont-inp input {
+    width: 156px;
+    height: 37px;
+  }
+  .cont-inp .btn-wrap {
+    position: relative;
+  }
+  .cont-inp .btn-wrap img {
+    position: absolute;
+    right: 35px;
+    bottom: -25px;
+  }
+
+  /* 결과 확인 */
+  .blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .cont-result {
+    font-size: 14px;
+    margin-bottom: 83px;
+  }
+  .cont-result .txt-wannabe {
+    margin-bottom: 17px;
+  }
+  .cont-result .txt-time {
+    margin-bottom: 55px;
+  }
+  .cont-result p > strong {
+    font-size: 24px;
+  }
+  .cont-result .btn-share {
+    background-color: #fff;
+    margin-left: 18px;
+  }
+
+  /* 푸터 */
+  .cont-footer {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .cont-footer img {
+    margin-bottom: 20px;
+  }
+  .cont-footer p {
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  /* 모달 */
+  .cont-modal {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cont-modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .cont-modal .cont-cheer {
+    background-color: #fff;
+    flex-basis: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    border-radius: 30px;
+  }
+  .img-fighting {
+    width: 396px;
+    margin-bottom: 20px;
+  }
+  .img-cheer {
+    width: 233px;
+    margin-bottom: 30px;
+  }
+  .img-licat {
+    width: 433px;
+    margin-bottom: 74px;
+  }
 }
